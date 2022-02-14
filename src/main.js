@@ -1,9 +1,16 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './assets/tailwind.css'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import "./assets/tailwind.css";
+import "boxicons";
 
-Vue.config.productionTip = false
+import VueCarousel from "vue-carousel";
+Vue.use(VueCarousel);
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount("#app");
